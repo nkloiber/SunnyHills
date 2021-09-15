@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>JavaScript Base Template</title>
+    <title>Sunset Hills | App</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,7 +22,7 @@
 
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">JS Template</a>
+        <a class="navbar-brand" href="index.html">Sunset Hills</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -30,13 +30,13 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="/index.html">Home</a>
+                    <a class="nav-link active" aria-current="page" href="/index.html">Sunset</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/app.html">The App</a>
+                    <a class="nav-link" href="/app.html">Sunset Hills | The App</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/code.html">The Code</a>
+                    <a class="nav-link" href="/code.html">Sunset Hills | The Code</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/about.html">About Me</a>
@@ -46,12 +46,130 @@
     </div>
 </nav>
 
-    <main class="flex-shrink-0">
-       <div class="container">
-           <h1 class="mt-5">Template with dark fixed navbar and sticky footer</h1>
-           <p class="lead">Pin a footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with padding-top: 60px; on the main > .container.</p>
-       </div>
-    </main>
+ <!-- Intro -->
+ <section>
+    <div class="container">
+        <div class="row">
+            <div class="col align-content-center text-info"><h1>Sunset Hills Challenge</h1></h1></div>
+        </div>
+    </div>
+</section>
+
+
+<body class="d-flex flex-column h-100">
+
+
+
+    <!-- Intro -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col align-content-center text-danger"><h1>Sunset Hills Challenge</</h1></div>
+            </div>
+        </div>
+    </section>
+    <hr />
+<section>
+    <div class="container">
+        <div class="row">
+            <p class="text-danger">In this challenge, we look at the heights of 5 different buildings and determine which of them would be able to view a sunset from East to West. This challenge utilizes a for loop to compare the height values.</p>
+        </div>
+    </div>
+</section>
+<hr />
+    <hr />
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col"><input id="Input1" class="form-control" placeholder="Building Height #1"></div>
+                <div class="col"><input id="Input2" class="form-control" placeholder="Building Height #2"></div>
+                <div class="col"><input id="Input3" class="form-control" placeholder="Building Height #3"></div>
+                <div class="col"><input id="Input4" class="form-control" placeholder="Building Height #4"></div>
+                <div class="col"><input id="Input5" class="form-control" placeholder="Building Height #5"></div>
+                                    <!-- Button to Open the Modal and the Landing page.-->
+                <div class="col"><button class="btn btn-danger" data-toggle="modal" data-target="#myModal" id="submit-btn">Submit</button></div>
+            </div>
+        </div>
+    </section>
+    <hr />
+   
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header bg-dark justify-content-center bg-info">
+                    <h4 class="modal-title text-center text-light">Results</h4>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body bg-light justify-content-center">
+                    <output class="align-items-center">
+                        <span class="text-dark" id="SeeSunset"></span>
+                    </output>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer bg-dark bg-info">
+                    <button type="button" class="btn btn-danger" onclick="ClearAll()" id="clear" data-dismiss="modal">Clear</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="//code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>//cdnjs.com/libraries/Chart.js</script>
+    <script>//www.jsdelivr.com/package/npm/chart.js?path=dist</script>
+
+    <script>
+        document.getElementById("submit-btn").addEventListener("click", function () {
+            DoSunsetHills()
+
+        });
+
+    </script>
+
+    <script>
+        function ClearAll() {
+            document.getElementById("Input1").value = "";
+            document.getElementById("Input2").value = "";
+            document.getElementById("Input3").value = "";
+            document.getElementById("Input4").value = "";
+            document.getElementById("Input5").value = "";
+            document.getElementById("SeeSunset").innerText = "";
+
+        }
+
+        function DoSunsetHills() {
+            let height1 = parseInt(document.getElementById("Input1").value);
+            let height2 = parseInt(document.getElementById("Input2").value);
+            let height3 = parseInt(document.getElementById("Input3").value);
+            let height4 = parseInt(document.getElementById("Input4").value);
+            let height5 = parseInt(document.getElementById("Input5").value);
+            let heightArray = [height1, height2, height3, height4, height5];
+            let newArray = [];
+            let count = 1;
+            let currMax = heightArray[0];
+            newArray.push(currMax);
+
+
+            for (let i = 1; i < heightArray.length; i++) {
+
+                if (heightArray[i] > currMax) {
+                    newArray.push(heightArray[i]);
+                    count++;
+                    currMax = heightArray[i];
+                }
+
+            }
+
+            document.getElementById("SeeSunset").innerHTML = `${count} Buildings can see the Sunset: [${newArray}]`;
+        };
+
+    </script>
 
 
     <footer class="footer mt-auto py-3 bg-dark">

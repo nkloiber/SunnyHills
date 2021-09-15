@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>JavaScript Base Template</title>
+    <title>Sunset Hills | Code</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,7 +22,7 @@
 
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">JS Template</a>
+        <a class="navbar-brand" href="index.html">Sunset Hills</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -30,13 +30,13 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="/index.html">Home</a>
+                    <a class="nav-link" href="/index.html">Sunset Hills</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/app.html">The App</a>
+                    <a class="nav-link" href="/app.html">Sunset Hills | The App</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/code.html">The Code</a>
+                    <a class="nav-link active" aria-current="page" href="/code.html">Sunset Hills | The Code</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/about.html">About Me</a>
@@ -47,9 +47,47 @@
 </nav>
 
     <main class="flex-shrink-0">
-       <div class="container">
-           <h1 class="mt-5">Template with dark fixed navbar and sticky footer</h1>
-           <p class="lead">Pin a footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with padding-top: 60px; on the main > .container.</p>
+       <div class="container-fluid">
+            <div class="row">
+                <div class="col" id="codeCol">
+                    <pre><code class="language-javascript line-numbers">
+                        document.getElementById("submit-btn").addEventListener("click", function () {
+                            startSunset()
+                        });
+                        
+                        function startSunset() {
+                            let height1 = parseInt(document.getElementById("Input1").value);
+                            let height2 = parseInt(document.getElementById("Input1").value);
+                            let height3 = parseInt(document.getElementById("Input1").value);
+                            let height4 = parseInt(document.getElementById("Input1").value);
+                            let height5 = parseInt(document.getElementById("Input1").value);
+                            let heightArray = [height1, height2, height3, height4, height5];
+                            let newArray = [];
+                            let count = 1;
+                            let currMax = heightArray[0];
+                            newArray.push(currMax);
+                            
+                            for (let i = 1; i &lt; heightArray.length; i++) {
+                                if (heightArray[i] > currMax) {
+                                    newArray.push(heightArray[i]);
+                                    count++;
+                                    currMax = heightArray[i];
+                                }
+                            }
+                            document.getElementById("DisplaySunset").innerHTML = `${count} See Sunset: [${newArray}]`;
+                        }
+                        
+                        
+                        
+                        </code>
+                    </pre>
+
+                </div>
+            <div class="col" id="explainCol">
+
+
+    </div>
+    </div>
        </div>
     </main>
 
@@ -58,15 +96,15 @@
         <div class="container-fluid text-center text-danger">
             <div class="row">
                <div class="col">
-                   &copy2021 <span class="text-primary">Nathan Kloiber</span>
-               </div> 
-               <div class="col">
-                   <span class="text-light text-uppercase"> nathan kloiber</span>
-               </div>
-               <div class="col">
-                    <a href="#" target="_blank"><i class="fab fa-linkedin fa-2x text-danger"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-github fa-2x text-danger"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-twitter fa-2x text-danger"></i></a>
+                &copy2021 <span class="text-danger">Nathan Kloiber</span>
+            </div> 
+            <div class="col">
+                <span class="text-light text-uppercase"> nathan kloiber</span>
+            </div>
+            <div class="col">
+                 <a href="#" target="_blank"><i class="fab fa-linkedin fa-2x text-danger"></i></a>
+                 <a href="#" target="_blank"><i class="fab fa-github fa-2x text-danger"></i></a>
+                 <a href="#" target="_blank"><i class="fab fa-twitter fa-2x text-danger"></i></a>
                </div>
                </div>
             </div>
